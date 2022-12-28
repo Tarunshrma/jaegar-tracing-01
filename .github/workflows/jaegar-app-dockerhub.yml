@@ -20,6 +20,8 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - run: pwd
+      - run: ls    
       - run: cd ./fronend
       - name: Build and push fronend
         uses: docker/build-push-action@v3
